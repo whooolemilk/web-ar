@@ -14,23 +14,7 @@ function draw() {
   const code = getCodeFromCapture(capture, captureGraphic);
   if (code) {
     print(code.data);
-
-    // QRコードを囲むように線を引く
-    const pos = code.location;
-    noFill();
-    stroke(255, 0, 0);
-    strokeWeight(10);
-    beginShape();
-    vertex(pos.topLeftCorner.x, pos.topLeftCorner.y);
-    vertex(pos.topRightCorner.x, pos.topRightCorner.y);
-    vertex(pos.bottomRightCorner.x, pos.bottomRightCorner.y);
-    vertex(pos.bottomLeftCorner.x, pos.bottomLeftCorner.y);
-    endShape(CLOSE);
-
-    // ついでにテキスト
-    stroke(0);
-    strokeWeight(1);
-    text(code.data, pos.topLeftCorner.x, pos.topLeftCorner.y);
+    console.log("found!", code);
   }
 }
 
