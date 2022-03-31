@@ -1,12 +1,12 @@
 let captureGraphic;
 
-function setup() {
+document.getElementById("button").onclick = function setup() {
   createCanvas(640, 480);
   captureGraphic = createGraphics(640, 480);
 
   capture = createCapture(VIDEO);
   capture.hide();
-}
+};
 
 function draw() {
   image(capture, 0, 0);
